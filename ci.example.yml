@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: false
+      - name: Install rspec
+        run: gem install rspec --no-document
+      - name: Run specs (verifier + validator + strategy)
+        run: rspec spec/ --format documentation
+
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install
+        working-directory: ui
+        run: npm install
+      - name: Typecheck
+        working-directory: ui
+        run: npm run typecheck
+      - name: Build IIFE bundle
+        working-directory: ui
+        run: npm run build

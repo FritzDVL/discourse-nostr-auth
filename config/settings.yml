@@ -1,0 +1,28 @@
+plugins:
+  discourse_nostr_enabled:
+    default: false
+    client: true
+  nostr_login_title:
+    default: "Sign in with Nostr"
+    client: true
+  nostr_button_text:
+    default: "Sign in with Nostr"
+    client: true
+  nostr_default_relays:
+    type: list
+    list_type: simple
+    default: "wss://relay.damus.io|wss://nos.lol|wss://relay.snort.social"
+    client: true
+  nostr_challenge_ttl_seconds:
+    default: 300
+    min: 30
+    max: 600
+  nostr_event_clock_skew_seconds:
+    default: 60
+    min: 5
+    max: 300
+  nostr_profile_fetch_timeout_ms:
+    default: 4000
+    client: true
+    min: 1000
+    max: 15000

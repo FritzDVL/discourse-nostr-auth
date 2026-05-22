@@ -1,0 +1,18 @@
+.btn-social.nostr {
+  background: #8e30eb;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background: darken(#8e30eb, 8%);
+    color: #fff;
+  }
+
+  .d-icon {
+    color: #fff;
+  }
+}
+
+#discourse-nostr-auth-host {
+  display: contents;
+}

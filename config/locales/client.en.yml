@@ -1,0 +1,7 @@
+en:
+  js:
+    nostr:
+      sign_in: "Sign in with Nostr"
+      no_extension: "No Nostr extension detected. Install Alby, nos2x, or another NIP-07 extension and reload the page."
+      cancelled: "Sign-in cancelled."
+      error: "Could not sign in with Nostr. Please try again."

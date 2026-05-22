@@ -1,0 +1,10 @@
+node_modules/
+ui/dist/
+ui/node_modules/
+*.log
+.DS_Store
+.idea/
+.vscode/
+coverage/
+tmp/
+spec/reports/

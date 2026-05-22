@@ -1,0 +1,20 @@
+en:
+  site_settings:
+    discourse_nostr_enabled: "Enable Sign in with Nostr."
+    nostr_login_title: "Title shown on the Nostr login button."
+    nostr_button_text: "Label shown on the Nostr login button."
+    nostr_default_relays: "Default Nostr relays used by the widget to fetch kind:0 profile metadata. Pipe-separated wss:// URLs."
+    nostr_challenge_ttl_seconds: "How long an issued challenge nonce remains valid (seconds)."
+    nostr_event_clock_skew_seconds: "Allowed +/- skew between event.created_at and server time (seconds)."
+    nostr_profile_fetch_timeout_ms: "Per-relay timeout when the widget fetches the user's kind:0 profile (milliseconds)."
+  discourse_nostr:
+    errors:
+      disabled: "Sign in with Nostr is disabled on this site."
+      no_challenge: "No active challenge for this session. Refresh and try again."
+      challenge_expired: "Challenge expired. Refresh and try again."
+      bad_event: "The signed event is malformed."
+      bad_challenge: "Signed event does not match the issued challenge."
+      bad_signature: "Signature verification failed."
+      bad_timestamp: "Signed event timestamp is outside the allowed window."
+      bad_kind: "Signed event kind is not 22242."
+      bad_id: "Signed event id does not match its canonical serialization."
